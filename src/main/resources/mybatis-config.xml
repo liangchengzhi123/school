@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
+    <!-- 1. 配置环境，default 指定默认使用的环境 ID -->
+    <environments default="development">
+        <!-- 开发环境 -->
+        <environment id="development">
+            <!-- 使用 JDBC 事务管理 -->
+            <transactionManager type="JDBC"/>
+            <!-- 配置数据源，POOLED 表示使用连接池 -->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/libraryproject"/>
+                <property name="username" value="shimu"/>
+                <property name="password" value="Lcz@120326"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!-- 2. 注册 Mapper 映射文件 -->
+    <mappers>
+        <mapper class="com.shimu.mapper.BookMapper"/>
+    </mappers>
+
+
+</configuration>

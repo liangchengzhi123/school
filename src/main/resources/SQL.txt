@@ -1,0 +1,10 @@
+CREATE TABLE `book` (
+    `id` BIGINT NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+    `name` VARCHAR(255) NOT NULL COMMENT '书名',
+    `author` VARCHAR(100) DEFAULT NULL COMMENT '作者',
+    `publish_time` DATETIME DEFAULT NULL COMMENT '出版时间',
+    `status` INT DEFAULT 1 COMMENT '状态：1-可借出 2-已借出 3-不可借出 4-损坏',
+    `position` INT DEFAULT NULL COMMENT '位置编号',
+    `tag` VARCHAR(50) DEFAULT NULL COMMENT '分类标签',
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='图书表';
