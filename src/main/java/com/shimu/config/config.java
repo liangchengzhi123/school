@@ -5,7 +5,6 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import java.io.InputStream;
-
 /**
  * MyBatis 工具配置类
  * <p>
@@ -14,10 +13,8 @@ import java.io.InputStream;
  * </p>
  */
 public class config {
-
     /** 全局唯一的 SqlSessionFactory，类加载时初始化一次 */
     private static SqlSessionFactory sqlSessionFactory;
-
     /*
      * 静态初始化块：JVM 加载本类时自动执行。
      * 从 classpath 读取 MyBatis 主配置文件，构建 SqlSessionFactory。
@@ -38,7 +35,6 @@ public class config {
             e.printStackTrace();
         }
     }
-
     /**
      * 获取全局唯一的 SqlSessionFactory
      * @return SqlSessionFactory 实例；初始化失败时返回 null
